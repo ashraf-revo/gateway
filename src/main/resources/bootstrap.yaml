@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: zuul
+  cloud:
+    gateway:
+      routes:
+        - id: example
+          uri: http://example.com/
+          predicates:
+            - Path=/
+          filters:
+            - StripPrefix=0
